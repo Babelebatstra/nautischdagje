@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookiebeleid — NautischDagje.nl</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','functionality_storage':'granted','security_storage':'granted','wait_for_update':500});
+</script>
+<style>
+  :root{--orange:#e8973a;--orange-hover:#d8862c;--dark:#42474d;--dark-2:#3a3f45;--green:#8bc34a;--muted:#c9ccd0;--ink:#2b2f34;--radius:14px;--maxw:820px}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--dark);color:#eef0f2;font-family:'Poppins',system-ui,sans-serif;line-height:1.65}
+  a{color:var(--orange)}
+  button{font-family:inherit;cursor:pointer;border:none}
+  .topbar{height:72px;display:flex;align-items:center;padding:0 28px}
+  .brand{font-weight:800;font-size:20px;letter-spacing:-.4px;color:#fff;text-decoration:none}
+  .brand b{color:var(--orange)}
+  .doc{max-width:var(--maxw);margin:0 auto;padding:30px 24px 80px}
+  .back{display:inline-block;color:var(--muted);text-decoration:none;font-size:14px;margin-bottom:26px}
+  .back:hover{color:#fff}
+  h1{font-size:clamp(28px,5vw,40px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;color:#fff}
+  .updated{color:var(--muted);font-size:14px;margin-bottom:14px}
+  .disclaimer{background:rgba(232,151,58,.12);border:1px solid rgba(232,151,58,.4);border-radius:12px;padding:16px 18px;font-size:13.5px;color:#f0e2cf;margin-bottom:34px}
+  h2{font-size:21px;font-weight:700;color:#fff;margin:34px 0 12px}
+  p{margin-bottom:14px;color:#dfe2e5}
+  ul{margin:0 0 16px 22px;color:#dfe2e5}
+  li{margin-bottom:8px}
+  table{width:100%;border-collapse:collapse;margin:8px 0 18px;font-size:13.5px}
+  th,td{border:1px solid rgba(255,255,255,.12);padding:10px 12px;text-align:left;vertical-align:top}
+  th{background:rgba(255,255,255,.04);color:#fff;font-weight:600}
+  .manage-btn{background:var(--orange);color:#fff;font-weight:700;font-size:15px;padding:14px 26px;border-radius:var(--radius);margin:6px 0 10px;transition:background .2s}
+  .manage-btn:hover{background:var(--orange-hover)}
+  .ph{color:var(--orange);font-weight:600}
+  footer.site{text-align:center;padding:40px 20px 36px;font-size:13px;background:var(--dark-2)}
+  footer.site .links a{color:var(--muted);text-decoration:underline;margin:0 10px;cursor:pointer}
+  footer.site .links a:hover{color:#fff}
+  .studio-badge{margin-top:20px;font-size:13px;color:var(--muted)}
+  .studio-badge a{color:#fff;font-weight:600;text-decoration:none}
+  .studio-badge a:hover{color:var(--orange)}
+  /* banner + modal (shared) */
+  #cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:2000;background:#fff;color:var(--ink);box-shadow:0 -8px 30px rgba(0,0,0,.25);padding:22px 20px;display:none}
+  #cookie-banner.show{display:block}
+  .cb-inner{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
+  .cb-text{flex:1 1 360px;font-size:14px;line-height:1.55}
+  .cb-text b{display:block;font-size:15px;margin-bottom:4px}
+  .cb-text a{color:var(--orange-hover);text-decoration:underline}
+  .cb-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .cb-btn{padding:12px 22px;border-radius:10px;font-weight:600;font-size:14px}
+  .cb-accept{background:var(--orange);color:#fff}.cb-accept:hover{background:var(--orange-hover)}
+  .cb-reject{background:#e6e8ea;color:var(--ink)}.cb-reject:hover{background:#d7dadd}
+  .cb-prefs{background:transparent;color:var(--ink);text-decoration:underline}
+  #cookie-prefs{position:fixed;inset:0;z-index:2100;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;padding:20px}
+  #cookie-prefs.show{display:flex}
+  .cp-card{background:#fff;color:var(--ink);border-radius:16px;max-width:540px;width:100%;padding:32px 30px;max-height:90vh;overflow:auto}
+  .cp-card h3{font-size:21px;margin-bottom:10px}
+  .cp-card>p{font-size:14px;color:#555;margin-bottom:22px}
+  .cp-row{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:16px 0;border-top:1px solid #eee}
+  .cp-row h4{font-size:15px;margin-bottom:4px}
+  .cp-row p{font-size:13px;color:#666;margin:0}
+  .switch{position:relative;width:46px;height:26px;flex:0 0 auto;margin-top:2px}
+  .switch input{opacity:0;width:0;height:0}
+  .slider{position:absolute;inset:0;background:#cfd3d6;border-radius:26px;transition:.2s;cursor:pointer}
+  .slider::before{content:"";position:absolute;height:20px;width:20px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.2s}
+  .switch input:checked + .slider{background:var(--orange)}
+  .switch input:checked + .slider::before{transform:translateX(20px)}
+  .switch input:disabled + .slider{background:var(--green);cursor:not-allowed}
+  .cp-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+  .cp-actions .cb-btn{flex:1 1 auto;text-align:center}
+</style>
+</head>
+<body>
+<div class="topbar"><a href="index.html" class="brand">Nautisch<b>Dagje</b>.nl</a></div>
+
+<main class="doc">
+  <a href="index.html" class="back">← Terug naar home</a>
+  <h1>Cookiebeleid</h1>
+  <div class="updated">Laatst bijgewerkt: 30 mei 2026</div>
+
+  <div class="disclaimer">
+    <strong>Let op:</strong> Dit is een ingevuld voorbeeld. Controleer de daadwerkelijk geplaatste cookies (bijv. via je browser of een scan) en pas de tabel hieronder daarop aan. Laat het beleid vóór publicatie juridisch controleren. Dit is geen juridisch advies.
+  </div>
+
+  <p>Op NautischDagje.nl gebruiken we cookies en vergelijkbare technieken. In dit cookiebeleid leggen we uit wat cookies zijn, welke we gebruiken en hoe je je toestemming beheert.</p>
+
+  <h2>1. Wat zijn cookies?</h2>
+  <p>Cookies zijn kleine tekstbestanden die bij een bezoek aan een website op je apparaat worden opgeslagen. Ze zorgen er bijvoorbeeld voor dat de website goed werkt, dat we het gebruik kunnen meten of dat we relevante advertenties kunnen tonen.</p>
+
+  <h2>2. Toestemming en Consent Mode v2</h2>
+  <p>Bij je eerste bezoek tonen we een cookiebanner. Noodzakelijke cookies plaatsen we altijd, omdat de website zonder deze niet goed functioneert. Analytische en marketingcookies plaatsen we alléén nadat je daarvoor toestemming hebt gegeven. De optie om alles te weigeren is even eenvoudig als de optie om te accepteren.</p>
+  <p>Voor analyse- en advertentiediensten maken we gebruik van Consent Mode v2. Zolang je geen toestemming hebt gegeven, staan de signalen <em>ad_storage</em>, <em>ad_user_data</em>, <em>ad_personalization</em> en <em>analytics_storage</em> standaard op "geweigerd" en worden er geen advertentie- of analyse-cookies geplaatst. Pas na jouw toestemming worden deze geactiveerd. Zo voldoen we aan de geldende EU-toestemmingsvereisten voor adverteren in de Europese Economische Ruimte.</p>
+  <button class="manage-btn" onclick="manageCookies()">Cookievoorkeuren wijzigen</button>
+
+  <h2>3. Welke cookies gebruiken we?</h2>
+  <table>
+    <tr><th>Categorie</th><th>Voorbeeld</th><th>Doel</th><th>Bewaartermijn</th></tr>
+    <tr><td>Noodzakelijk</td><td>toestemmingsvoorkeur (nd_consent)</td><td>Onthoudt je cookiekeuze; basiswerking van de site</td><td>tot 12 maanden</td></tr>
+    <tr><td>Analytisch</td><td>_ga, _ga_*</td><td>Google Analytics: meten van websitegebruik</td><td>tot 24 maanden</td></tr>
+    <tr><td>Marketing</td><td>_gcl_au</td><td>Google Ads: meten van advertentie-effectiviteit (conversies)</td><td>tot 90 dagen</td></tr>
+    <tr><td>Marketing</td><td><span class="ph">[evt. _fbp / Meta Pixel]</span></td><td><span class="ph">[indien gebruikt: remarketing / campagnemeting]</span></td><td><span class="ph">[…]</span></td></tr>
+  </table>
+  <p>De exacte cookies kunnen variëren afhankelijk van de diensten die actief zijn. Pas deze tabel aan op basis van de cookies die daadwerkelijk op de site worden geplaatst.</p>
+
+  <h2>4. Cookies beheren in je browser</h2>
+  <p>Naast onze cookiebanner kun je cookies ook beheren of verwijderen via de instellingen van je browser. Houd er rekening mee dat het uitschakelen van bepaalde cookies invloed kan hebben op de werking van de website.</p>
+
+  <h2>5. Wijzigingen</h2>
+  <p>Wij kunnen dit cookiebeleid van tijd tot tijd aanpassen. De actuele versie staat altijd op deze pagina.</p>
+
+  <h2>6. Contact</h2>
+  <p>Vragen over ons cookiebeleid? Neem contact op via <span class="ph">[e-mailadres]</span>. Zie ook ons <a href="privacy-policy.html">privacybeleid</a>.</p>
+</main>
+
+<footer class="site">
+  <div class="links"><a href="privacy-policy.html">Privacybeleid</a>·<a href="cookie-policy.html">Cookiebeleid</a>·<a onclick="manageCookies()">Cookievoorkeuren</a>·<a href="index.html">Home</a></div>
+  <div class="studio-badge">Powered by <a href="https://studioait.nl" target="_blank" rel="noopener">Studio AIT</a></div>
+</footer>
+
+<!-- COOKIE CONSENT BANNER -->
+<div id="cookie-banner" role="dialog" aria-label="Cookietoestemming">
+  <div class="cb-inner">
+    <div class="cb-text">
+      <b>Wij gebruiken cookies 🍪</b>
+      We plaatsen noodzakelijke cookies om de site te laten werken. Met jouw toestemming gebruiken we ook analytische en marketingcookies (o.a. Google). Lees meer in ons cookiebeleid.
+    </div>
+    <div class="cb-actions">
+      <button class="cb-btn cb-prefs" onclick="openPrefs()">Voorkeuren</button>
+      <button class="cb-btn cb-reject" onclick="rejectAll()">Alles weigeren</button>
+      <button class="cb-btn cb-accept" onclick="acceptAll()">Alles accepteren</button>
+    </div>
+  </div>
+</div>
+
+<!-- COOKIE PREFERENCES MODAL -->
+<div id="cookie-prefs" role="dialog" aria-label="Cookievoorkeuren">
+  <div class="cp-card">
+    <h3>Cookievoorkeuren</h3>
+    <p>Beheer hieronder je toestemming per categorie. Je kunt dit altijd later aanpassen.</p>
+    <div class="cp-row"><div><h4>Noodzakelijk</h4><p>Vereist voor de basiswerking van de website. Kan niet worden uitgeschakeld.</p></div><label class="switch"><input type="checkbox" checked disabled><span class="slider"></span></label></div>
+    <div class="cp-row"><div><h4>Analytisch</h4><p>Helpt ons begrijpen hoe bezoekers de site gebruiken (bijv. Google Analytics).</p></div><label class="switch"><input type="checkbox" id="tg-analytics"><span class="slider"></span></label></div>
+    <div class="cp-row"><div><h4>Marketing</h4><p>Wordt gebruikt voor advertenties en het meten van campagnes (bijv. Google Ads).</p></div><label class="switch"><input type="checkbox" id="tg-marketing"><span class="slider"></span></label></div>
+    <div class="cp-actions">
+      <button class="cb-btn cb-reject" onclick="rejectAll()">Alles weigeren</button>
+      <button class="cb-btn cb-prefs" style="border:1px solid #ddd" onclick="savePrefs()">Voorkeuren opslaan</button>
+      <button class="cb-btn cb-accept" onclick="acceptAll()">Alles accepteren</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function getConsent(){try{return JSON.parse(localStorage.getItem('nd_consent'));}catch(e){return null;}}
+  function applyConsent(c){gtag('consent','update',{'ad_storage':c.marketing?'granted':'denied','ad_user_data':c.marketing?'granted':'denied','ad_personalization':c.marketing?'granted':'denied','analytics_storage':c.analytics?'granted':'denied'});}
+  function saveConsent(c){try{localStorage.setItem('nd_consent',JSON.stringify(c));}catch(e){}applyConsent(c);hideBanner();closePrefs();}
+  function acceptAll(){saveConsent({necessary:true,analytics:true,marketing:true});}
+  function rejectAll(){saveConsent({necessary:true,analytics:false,marketing:false});}
+  function savePrefs(){saveConsent({necessary:true,analytics:document.getElementById('tg-analytics').checked,marketing:document.getElementById('tg-marketing').checked});}
+  function showBanner(){var b=document.getElementById('cookie-banner');if(b)b.classList.add('show');}
+  function hideBanner(){var b=document.getElementById('cookie-banner');if(b)b.classList.remove('show');}
+  function openPrefs(){var c=getConsent()||{analytics:false,marketing:false};var a=document.getElementById('tg-analytics'),m=document.getElementById('tg-marketing');if(a)a.checked=!!c.analytics;if(m)m.checked=!!c.marketing;document.getElementById('cookie-prefs').classList.add('show');}
+  function closePrefs(){var p=document.getElementById('cookie-prefs');if(p)p.classList.remove('show');}
+  function manageCookies(){openPrefs();}
+  (function(){var c=getConsent();if(c){applyConsent(c);}else{showBanner();}var pf=document.getElementById('cookie-prefs');if(pf)pf.addEventListener('click',function(e){if(e.target===pf)closePrefs();});})();
+</script>
+</body>
+</html>
